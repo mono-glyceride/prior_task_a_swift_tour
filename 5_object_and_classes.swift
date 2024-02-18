@@ -16,7 +16,7 @@ shape.numberOfSides = 7
 var shapeDescription = shape.simpleDescription()
 print(shapeDescription)
 
-class NameShape {
+class NamedShape {
   var numberOfSides: Int = 0
   var name: String
   init(name: String) {
