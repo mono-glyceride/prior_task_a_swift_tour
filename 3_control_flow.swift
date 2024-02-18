@@ -29,3 +29,10 @@ if let name = optionalName {
 print(greeting)
 
 // Experiment optionalNameをnilに変えてみましょう。どんな挨拶が出力されるでしょうか？　optionalNameがnilの場合に別の挨拶が出力されるようにelseを追加してみましょう。
+
+let nickname: String? = nil
+let fullName: String = "John Appleseed"
+let informationGreeting = "Hi \(nickname ?? fullName)"
+if let nickname {
+  print("Hey, \(nickname)")
+}
