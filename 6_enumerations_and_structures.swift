@@ -20,3 +20,8 @@ enum Rank: Int {
 }
 let ace = Rank.ace
 let aceRawValue = ace.rawValue
+
+//Experiment ２つのRankのraw valueを比較してRankを比較するメソッドを追加してみましょう。
+let firstRank = Rank.two
+let secondRank = Rank.nine
+print(firstRank.rawValue < secondRank.rawValue)
