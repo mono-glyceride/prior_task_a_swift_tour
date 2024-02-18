@@ -77,3 +77,6 @@ let threeTimesOnlyEvenNumber = closerNumbers.map({ (number: Int) -> Int in
   }
 })
 print(threeTimesOnlyEvenNumber)
+
+let mappedNumbers = numbers.map({ number in 3 * number })
+print(mappedNumbers)
