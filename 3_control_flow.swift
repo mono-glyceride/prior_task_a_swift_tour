@@ -48,3 +48,21 @@ switch vegetables {
   default:
   print("Every tastes good in soup.")
 }
+
+let interestingNumbers = [
+  "Prime": [2, 3, 5, 6, 11, 13],
+  "Fibonacci": [1, 1, 2, 3, 5, 8],
+  "Square": [1, 4, 9, 16, 25],
+]
+var largest = 0
+var kindOfLargest = "Prime"
+for (kindOfNumber, numbers) in interestingNumbers {
+  for number in numbers {
+    if number > largest {
+      largest = number
+      kindOfLargest = kindOfNumber
+    }
+  }
+}
+
+print(kindOfLargest, largest)
