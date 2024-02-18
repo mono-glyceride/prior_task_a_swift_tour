@@ -65,3 +65,15 @@ let multipliedNumbers = closerNumbers.map({ (number: Int) -> Int in
   return result
 })
 print(multipliedNumbers)
+
+// Experiment 上記のクロージャを全ての奇数で0を返すように書き換えてみましょう
+let threeTimesOnlyEvenNumber = closerNumbers.map({ (number: Int) -> Int in
+  if number % 2 == 0 {
+    let threeTimesNumber = 3 * number
+    return threeTimesNumber
+  } else {
+    let zero = 0
+    return zero
+  }
+})
+print(threeTimesOnlyEvenNumber)
