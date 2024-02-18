@@ -33,3 +33,9 @@ let goodMorningName = "おはよう、\(name)"
 let juryokuSentence = "黒閃の威力は通常の呪力の \(Float(5.0/2.0)) 乗"
 print(goodMorningName)
 print(juryokuSentence)
+
+let gojoLine = """
+もっと言葉を選んだ方がいいんじゃないか？
+今際の際だぞ
+"""
+print(gojoLine)
