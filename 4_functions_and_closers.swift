@@ -80,3 +80,6 @@ print(threeTimesOnlyEvenNumber)
 
 let mappedNumbers = numbers.map({ number in 3 * number })
 print(mappedNumbers)
+
+let sortedNumbers = numbers.sorted { $0 > $1 }
+print(sortedNumbers)
