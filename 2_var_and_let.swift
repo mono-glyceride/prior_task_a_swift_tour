@@ -14,7 +14,7 @@ print(four)
 // 値は暗黙的に他の型に変換されない
 let label = "The width is "
 let width = 94
-let widthLabel = label + width
+let widthLabel = label + String(width)
 print(widthLabel)
 
 // Experiment 最後の行からStringへの変換を消してみてください。どんなエラーが起こるでしょうか
