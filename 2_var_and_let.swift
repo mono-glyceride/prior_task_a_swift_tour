@@ -39,3 +39,14 @@ let gojoLine = """
 今際の際だぞ
 """
 print(gojoLine)
+
+var specialClassList = ["Tsukumo", "Gojo", "Geto"]
+specialClassList[1] = "Okkotsu"
+print(specialClassList)
+var occupations = [
+  "Malcolm": "Captain",
+  "Kaylee": "Mechanic"
+]
+occupations["Jayne"] = "Public Relations"
+specialClassList.append("Yaga")
+print(specialClassList)
