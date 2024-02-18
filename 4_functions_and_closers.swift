@@ -31,3 +31,15 @@ func returnFifteen() -> Int {
   return y
 }
 returnFifteen()
+
+// 関数はオブジェクトなので、値として他の関数を戻り値にできる
+
+func makeIncrementer() -> ((Int) -> Int) {
+  func addOne(number: Int) -> Int {
+    return 1 + number
+  }
+  return addOne
+}
+var increment = makeIncrementer()
+print(increment)
+print(increment(7))
