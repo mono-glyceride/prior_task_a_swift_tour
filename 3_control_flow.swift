@@ -36,3 +36,15 @@ let informationGreeting = "Hi \(nickname ?? fullName)"
 if let nickname {
   print("Hey, \(nickname)")
 }
+
+let vegetables = "red pepper"
+switch vegetables {
+  case "celery":
+  print("Add some rasins and make ants on a log.")
+  case "cucumber", "watercress":
+  print("That would make a good tea sandwich.")
+  case let x where x.hasSuffix("pepper"):
+  print("Is it a spicy \(x)?")
+  default:
+  print("Every tastes good in soup.")
+}
