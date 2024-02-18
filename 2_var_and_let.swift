@@ -18,3 +18,10 @@ let widthLabel = label + String(width)
 print(widthLabel)
 
 // Experiment 最後の行からStringへの変換を消してみてください。どんなエラーが起こるでしょうか
+
+let apples = 3
+let oranges = 5
+let appleSummary = "I have \(apples) apples."
+let fruitSummary = "I have \(apples + oranges) pieces of fruit."
+print(appleSummary)
+print(fruitSummary)
