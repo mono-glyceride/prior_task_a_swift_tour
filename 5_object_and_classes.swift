@@ -48,3 +48,30 @@ class Square: NamedShape {
 let test = Square(sideLength: 5.2, name: "my test square")
 print(test.area())
 print(test.simpleDescription())
+
+/*
+Experiment
+radius  と　nameをイニシャライザの引数にとるCircleという名前のNameShapeの別のサブクラスを作ってみましょう、そして、Circleクラスにarea()、
+simpleDescription()メソッドを実装してみましょう
+*/
+
+class Circle: NamedShape {
+  var radius: Double
+
+  init(radius: Double, name: String) {
+    self.radius = radius
+    super.init(name: name)
+    numberOfSides = 0
+  }
+
+  func area() -> Double {
+    return radius * radius * 3.14
+  }
+
+  override func simpleDescription() -> String {
+    return "A circle with radius of length \(radius)"
+  }
+}
+let testCircle = Circle(radius: 5, name: "my test circle")
+print(testCircle.area())
+print(testCircle.simpleDescription())
