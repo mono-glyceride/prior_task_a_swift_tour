@@ -68,7 +68,7 @@ for (kindOfNumber, numbers) in interestingNumbers {
 print(kindOfLargest, largest)
 
 var n = 2
-while n < 100 {
+while n < 0 {
   n *= 2
 }
 print(n)
@@ -76,5 +76,5 @@ print(n)
 var m = 2
 repeat {
   m *= 2
-} while m < 100
+} while m < 0
 print(m)
