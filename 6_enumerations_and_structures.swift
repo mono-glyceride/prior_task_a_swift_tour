@@ -25,3 +25,7 @@ let aceRawValue = ace.rawValue
 let firstRank = Rank.two
 let secondRank = Rank.nine
 print(firstRank.rawValue < secondRank.rawValue)
+
+if let convertedRank = Rank(rawValue: 3) {
+  let threeDescription = convertedRank.simpleDescription()
+}
