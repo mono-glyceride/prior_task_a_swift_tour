@@ -50,3 +50,8 @@ var occupations = [
 occupations["Jayne"] = "Public Relations"
 specialClassList.append("Yaga")
 print(specialClassList)
+
+specialClassList = []
+occupations = [:]
+let emptyArray: [String] = []
+let emptyDictionary: [String: Float] = [:]
