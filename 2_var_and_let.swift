@@ -25,3 +25,11 @@ let appleSummary = "I have \(apples) apples."
 let fruitSummary = "I have \(apples + oranges) pieces of fruit."
 print(appleSummary)
 print(fruitSummary)
+
+// Experiment 文字列に浮動小数点の計算を含めたり、誰かの名前をあいさつに含めるために、\()を使用してみましょう
+
+let name = "サスケくん"
+let goodMorningName = "おはよう、\(name)"
+let juryokuSentence = "黒閃の威力は通常の呪力の \(Float(5.0/2.0)) 乗"
+print(goodMorningName)
+print(juryokuSentence)
