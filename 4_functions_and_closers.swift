@@ -59,7 +59,9 @@ var numbers = [20, 19, 7, 12]
 print(hasAnyMatches(list: numbers, condition: lessThanTen))
 
 // クロージャ　あとで実行される可能性があるコードブロック
-numbers.map({ (number: Int) -> Int in
+let closerNumbers = [1, 2, 3, 4, 5]
+let multipliedNumbers = closerNumbers.map({ (number: Int) -> Int in
   let result = 3 * number
   return result
 })
+print(multipliedNumbers)
