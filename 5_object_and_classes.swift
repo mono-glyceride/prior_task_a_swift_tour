@@ -10,3 +10,8 @@ class Shape {
 }
 
 //Experiment letを使用して定数プロパティを追加してください。また。引数を受け取る別のメソッドも追加してみましょう。
+
+var shape = Shape()
+shape.numberOfSides = 7
+var shapeDescription = shape.simpleDescription()
+print(shapeDescription)
