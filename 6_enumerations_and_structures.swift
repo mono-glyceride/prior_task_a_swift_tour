@@ -68,3 +68,18 @@ color() メソッドをSuitに追加してみましょう。spadesとclubsは"bl
 heartsとdiamondsは"red"を返します。
 */
 print(hearts.color())
+
+enum ServeResponse {
+  case result(String, String)
+  case failure(String)
+}
+
+let success = ServeResponse.result("6:00a am", "8:09 pm")
+let failure = ServeResponse.failure("Out of cheese.")
+
+switch success {
+  case let .result(sunrise, sunset):
+  print("Sunrise is at \(sunrise) and sunset is at \(sunset).")
+  case let .failure(message):
+  print("Failure... \(message)")
+}
