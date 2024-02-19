@@ -1,4 +1,4 @@
-enum Rank: Int {
+enum Rank: Int, CaseIterable {
   case ace = 1
   case two, three, four, five, six, seven, eight, nine, ten
   case jack, queen, king
@@ -30,7 +30,7 @@ if let convertedRank = Rank(rawValue: 3) {
   let threeDescription = convertedRank.simpleDescription()
 }
 
-enum Suit {
+enum Suit: CaseIterable {
   case spades, hearts, diamonds, clubs
 
   func simpleDescription() -> String {
@@ -96,3 +96,19 @@ struct Card {
 let threeOfSpades = Card(rank: .three, suit: .spades)
 let threeOfSpadesDescription = threeOfSpades.simpleDescription()
 print(threeOfSpades)
+
+// Experiment 全種（ランクとスートの全組み合わせ）のカードからなる配列を返すメソッドを書いてみよう
+func deck() -> [Card]{
+  var cards: [Card] = []
+  for rank in Rank.allCases{
+    for suit in Suit.allCases{
+      cards.append(Card(rank: rank, suit: suit))
+    }
+  }
+  return cards
+}
+
+var cardDeck = deck()
+for card in cardDeck{
+  print(card.rank, card.suit)
+}
