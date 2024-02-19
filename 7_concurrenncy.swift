@@ -12,3 +12,11 @@ func fetchUsername(from server: String) async -> String {
   }
   return "Guest"
 }
+
+func connecUser(to server: String) async {
+  async let userID = fetchUserID(from: server)
+  async let username = fetchUsername(from: server)
+  let greeting = await "Hello \(username), user ID \(userID)"
+  print(greeting)
+}
+await connecUser(to: "async test")
