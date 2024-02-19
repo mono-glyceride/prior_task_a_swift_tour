@@ -83,3 +83,5 @@ switch success {
   case let .failure(message):
   print("Failure... \(message)")
 }
+
+//Experiment ServeResponseに3つ目のケースを追加して、switch文を変更してください。
