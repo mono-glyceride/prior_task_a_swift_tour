@@ -20,3 +20,7 @@ func connecUser(to server: String) async {
   print(greeting)
 }
 await connecUser(to: "async test")
+
+Task {
+  await connecUser(to: "primary")
+}
