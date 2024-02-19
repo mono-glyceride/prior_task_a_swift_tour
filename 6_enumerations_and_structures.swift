@@ -45,8 +45,26 @@ enum Suit {
       return "clubs"
     }
   }
+
+  func color() -> String {
+    switch self {
+      case .spades:
+      return "black"
+      case .clubs:
+      return "black"
+      default:
+      return "red"
+    }
+  }
 }
 let hearts = Suit.hearts
 let heartsDescription = hearts.simpleDescription()
 print(hearts)
 print(heartsDescription)
+
+/*
+Experiment
+color() メソッドをSuitに追加してみましょう。spadesとclubsは"blank"を返し、
+heartsとdiamondsは"red"を返します。
+*/
+print(hearts.color())
