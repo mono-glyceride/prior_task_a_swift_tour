@@ -42,3 +42,8 @@ do {
 Experiment doブロックの中でエラーをスローするコードを追加してみましょう。最初のcatchブロックでエラーを処理するためにはどの種類のエラーをスローする必要があるでしょうか。
 2つ目、３つ目の場合はどうでしょうか。
 */
+
+let printerSuccess = try? send(job: 1884, toPrinter: "Mergenthaler")
+let printerFailure = try? send(job: 1885, toPrinter: "Never Has Toner")
+print(printerSuccess)
+print(printerFailure)
