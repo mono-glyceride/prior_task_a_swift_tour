@@ -48,3 +48,16 @@ extension Int: ExampleProtocol {
   }
 }
 print(7.simpleDescription)
+
+// Experiment absoluteValueプロパティをDoubleに追加するextensionを書いてみましょう
+
+protocol AbsoluteProtocol {
+  var absoluteValue: String { get }
+}
+
+extension Double: AbsoluteProtocol {
+  var absoluteValue: String {
+    return "絶対値:\(abs(self))"
+  }
+}
+print((-4.25).absoluteValue)
