@@ -10,3 +10,10 @@ func send(job: Int, toPrinter printerName: String) throws -> String {
   }
   return "Job sent"
 }
+
+do {
+  let printerResponse = try send(job: 1040, toPrinter: "Bi Shend")
+  print(printerResponse)
+} catch {
+  print(error)
+}
