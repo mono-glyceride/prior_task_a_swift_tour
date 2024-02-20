@@ -47,3 +47,6 @@ actor ServerConnection {
     return userID
   }
 }
+
+let server = ServerConnection()
+let userID = await server.connect()
