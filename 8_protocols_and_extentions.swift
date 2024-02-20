@@ -35,3 +35,16 @@ Experiment
 ExperimentProtocolrankにもう一つの要件を追加してみましょう。SimpleClassとSimpleStructureには
 どういう変更が必要になるでしょうか
 */
+
+extension Int: ExampleProtocol {
+  var simpleDescription: String {
+    return "The number \(self)"
+  }
+  var number: Int {
+    return self.number
+  }
+  mutating func adjust() {
+    self += 42
+  }
+}
+print(7.simpleDescription)
