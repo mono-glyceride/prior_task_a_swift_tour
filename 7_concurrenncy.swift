@@ -37,3 +37,13 @@ let userIDs = await withTaskGroup(of: Int.self) { group in
   }
   return results
 }
+
+actor ServerConnection {
+  var server: String = "primary"
+  private var activeUsers: [Int] = []
+  func connect() async -> Int {
+    let userID = await fetchUserID(from: server)
+    activeUsers.append(userID)
+    return userID
+  }
+}
