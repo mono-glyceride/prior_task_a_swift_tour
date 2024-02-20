@@ -13,6 +13,7 @@ class SimpleClass: ExampleProtocol {
   }
 }
 var a = SimpleClass()
+a.adjust()
 let aDescription = a.simpleDescription
 print(aDescription)
 print(a.number)
@@ -61,3 +62,6 @@ extension Double: AbsoluteProtocol {
   }
 }
 print((-4.25).absoluteValue)
+
+let protocolValue: any ExampleProtocol = a
+print(protocolValue.simpleDescription)
