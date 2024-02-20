@@ -33,7 +33,7 @@ let userIDs = await withTaskGroup(of: Int.self) { group in
   }
   var results: [Int] = []
   for await result in group {
-    result.append(result)
+    results.append(result)
   }
   return results
 }
