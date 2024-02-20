@@ -14,16 +14,19 @@ enum OptionalValue<Wrapped> {
 var possibleInteger: OptionalValue<Int> = .none
 possibleInteger = .some(100)
 
-func anyCommonElements<T: Sequence, U: Sequence>(_ lhs:T, _ rhs: U) -> Bool
+func anyCommonElements<T: Sequence, U: Sequence>(_ lhs:T, _ rhs: U) -> [T.Element]
 where T.Element: Equatable, T.Element == U.Element
 {
+  var commonArray = [T.Element]()
   for lhsItem in lhs {
     for rhsItem in rhs {
       if lhsItem == rhsItem {
-        return true
+        commonArray.append(rhsItem)
       }
     }
   }
-  return false
+  return commonArray
 }
 print(anyCommonElements([1, 2, 3], [3]))
+
+// Experiment anyCommonElements()を２つのシーケンスの共通の要素が含まれる配列を返すように修正してみましょう。
